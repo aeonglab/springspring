@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.apitest.ApitestApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-08-12T08:51:33" hostname="application-1" time="0.323">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.example.apitest.ApitestApplicationTests" time="0.323"/>
+  <system-out><![CDATA[?[36m2024-08-12 08:51:31.020?[m ?[32mINFO ?[m ?[33m[Test worker]?[m Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.apitest.ApitestApplicationTests], using SpringBootContextLoader
+?[36m2024-08-12 08:51:31.033?[m ?[32mINFO ?[m ?[33m[Test worker]?[m Could not detect default resource locations for test class [com.example.apitest.ApitestApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+?[36m2024-08-12 08:51:31.034?[m ?[32mINFO ?[m ?[33m[Test worker]?[m Could not detect default configuration classes for test class [com.example.apitest.ApitestApplicationTests]: ApitestApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+?[36m2024-08-12 08:51:31.131?[m ?[32mINFO ?[m ?[33m[Test worker]?[m Found @SpringBootConfiguration com.example.apitest.ApitestApplication for test class com.example.apitest.ApitestApplicationTests
+?[36m2024-08-12 08:51:31.240?[m ?[32mINFO ?[m ?[33m[Test worker]?[m Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+?[36m2024-08-12 08:51:31.251?[m ?[32mINFO ?[m ?[33m[Test worker]?[m Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@11a7ba62, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@340b7ef6, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@30404dba, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6050462a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4c0884e8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@231baf51, org.springframework.test.context.event.EventPublishingTestExecutionListener@11841b15, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@73877e19, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7b208b45, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5bfc257, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@34523d46, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7cedfa63, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3e83c18]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.18)
+
+?[36m2024-08-12 08:51:31.566?[m ?[32mINFO ?[m ?[33m[Test worker]?[m Starting ApitestApplicationTests using Java 11.0.24 on application-1 with PID 165795 (started by aevalog_gmail_com in /home/aevalog_gmail_com/apitest)
+?[36m2024-08-12 08:51:31.572?[m ?[32mINFO ?[m ?[33m[Test worker]?[m No active profile set, falling back to 1 default profile: "default"
+?[36m2024-08-12 08:51:32.749?[m ?[32mINFO ?[m ?[33m[Test worker]?[m Adding welcome page: class path resource [static/index.html]
+?[36m2024-08-12 08:51:32.949?[m ?[33mWARN ?[m ?[33m[Test worker]?[m Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+?[36m2024-08-12 08:51:33.039?[m ?[32mINFO ?[m ?[33m[Test worker]?[m Started ApitestApplicationTests in 1.751 seconds (JVM running for 3.341)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
