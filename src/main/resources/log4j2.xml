@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <properties>
+        <property name="service_name">communicator</property>
+	<property name="log_path">/home/aevalog_gmail_com/log2</property>
+    </properties>
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout>
+                <LevelPatternSelector defaultPattern="%style{%d{yyyy-MM-dd HH:mm:ss.SSS}}{cyan} %highlight{%-5level}{FATAL=bg_red, ERROR=red,
+                    INFO=green, DEBUG=blue} %style{[%thread]}{yellow} %msg%n">
+                    <PatternMatch key="ERROR" pattern="%style{%d{yyyy-MM-dd HH:mm:ss.SSS}}{cyan} %highlight{%-5level}{FATAL=bg_red, ERROR=red,
+                    INFO=green, DEBUG=blue} %style{[%thread] (%class{0}:%L) %msg%n}{red}" />
+                </LevelPatternSelector>
+            </PatternLayout>
+        </Console>
+
+        <RollingFile name="RollingFile"
+                     fileName="${log_path}/pat_${service_name}.log"
+                     filePattern="${log_path}/$${date:yyyy-MM-dd}/pat_${service_name}_%d{dd-MM-yyyy}-%i.log.gz">
+            <PatternLayout>
+                <LevelPatternSelector defaultPattern="%style{%d{yyyy-MM-dd HH:mm:ss.SSS}}{cyan} %highlight{%-5level}{FATAL=bg_red, ERROR=red,
+                    INFO=green, DEBUG=blue} %style{[%thread]}{yellow} %msg%n">
+                    <PatternMatch key="ERROR" pattern="%style{%d{yyyy-MM-dd HH:mm:ss.SSS}}{cyan} %highlight{%-5level}{FATAL=bg_red, ERROR=red,
+                    INFO=green, DEBUG=blue} %style{[%thread]}{yellow} (%class{0}:%L) %msg%n" />
+                </LevelPatternSelector>
+            </PatternLayout>
+            <Policies>
+                <!-- rollover on startup, daily and when the file reaches
+                    10 MegaBytes -->
+                <OnStartupTriggeringPolicy />
+                <SizeBasedTriggeringPolicy
+                        size="100 MB" />
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+        </RollingFile>
+        <RollingFile name="RollingFileForAccess"
+                     fileName="${log_path}/access.log"
+                     filePattern="${log_path}/$${date:yyyy-MM-dd}/access-%d{dd-MM-yyyy}-%i.log.gz">
+            <PatternLayout>
+                <pattern>%d{ISO8601} [%t] %-5p %c %x - %m%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <!-- rollover on startup, daily and when the file reaches
+                    10 MegaBytes -->
+                <OnStartupTriggeringPolicy />
+                <SizeBasedTriggeringPolicy
+                        size="100 MB" />
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- LOG everything at INFO level -->
+        <Root level="info">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="RollingFile" />
+            <AppenderRef ref="RollingFileForAccess" />
+        </Root>
+        <!-- LOG "com.sec*" at TRACE level -->
+        <Logger name="com.sec" level="info"></Logger>
+        <Logger name="org.hibernate.SQL" level="debug"></Logger>
+        <Logger name="org.springframework.jdbc" level="info"></Logger>
+    </Loggers>
+
+</Configuration>
